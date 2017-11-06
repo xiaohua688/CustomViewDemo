@@ -13,6 +13,10 @@ import android.view.View;
 
 import com.zkyr.customviewdemo.R;
 
+import java.util.HashSet;
+import java.util.Random;
+import java.util.Set;
+
 /**
  * Created by xiaohua on 2017/11/6.
  */
@@ -63,6 +67,14 @@ public class CustomTextView extends View {
         mBound=new Rect();
 
         mPaint.getTextBounds(textStr,0,textStr.length(),mBound);
+
+        this.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                textStr=getRondomText();
+                postInvalidate();
+            }
+        });
     }
 
     @Override
@@ -117,5 +129,19 @@ public class CustomTextView extends View {
         }
 
         setMeasuredDimension(width,height);
+    }
+
+    public String getRondomText(){
+        Random random=new Random();
+        Set<Integer> set=new HashSet<>();
+        while (set.size()<4){
+            int r=random.nextInt(10);
+            set.add(r);
+        }
+        StringBuilder sb=new StringBuilder();
+        for(Integer integer:set){
+            sb.append(""+integer);
+        }
+        return sb.toString();
     }
 }
