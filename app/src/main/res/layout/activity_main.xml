@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="20dp"
     tools:context="com.zkyr.customviewdemo.MainActivity">
 
     <com.zkyr.customviewdemo.customview.CustomTextView
@@ -15,12 +16,15 @@
         android:layout_centerInParent="true"
         android:padding="10dp" />
 
-    <TextView
+
+    <com.zkyr.customviewdemo.customview.CustomImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="hhhppp"
+        app:src="@mipmap/logo"
+        app:titleText="hhhhhpppppppppppppppppppppppppppppppppppp"
+        app:titleTextColor="#000"
+        app:titleTextSize="16sp"
         android:padding="10dp"
-        android:background="#ff0"
-        android:textColor="#f00"/>
+        app:imageScaleType="fitXY"/>
 
 </RelativeLayout>
