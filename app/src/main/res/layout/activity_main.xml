@@ -25,6 +25,15 @@
         app:titleTextColor="#000"
         app:titleTextSize="16sp"
         android:padding="10dp"
-        app:imageScaleType="fitXY"/>
+        app:imageScaleType="fitXY"
+        android:visibility="gone"/>
+
+    <com.zkyr.customviewdemo.customview.CustomProgressBar
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:firstColor="#0f0"
+        app:secondColor="#f00"
+        app:circleWidth="10dp"
+        app:speed="20"/>
 
 </RelativeLayout>

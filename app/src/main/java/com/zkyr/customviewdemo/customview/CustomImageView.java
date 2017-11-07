@@ -71,7 +71,6 @@ public class CustomImageView extends View {
                     break;
             }
         }
-
         ta.recycle();
         mPaint = new Paint();
         mBound = new Rect();
